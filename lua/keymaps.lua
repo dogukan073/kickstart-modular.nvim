@@ -6,11 +6,17 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '[d', vim.diagnostic.get_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.get_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '[b', '<CMD>bprevious<CR>', { desc = 'Cyle to Prev File in the [B]uffer' })
+vim.keymap.set('n', ']b', '<CMD>bnext<CR>', { desc = 'Cyle to Next File in the [B]uffer' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Ex command' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'", { desc = 'Move lines up in Visual Mode' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'", { desc = 'Move lines down in Visual Mode' })
 
+--
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

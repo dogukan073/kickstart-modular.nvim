@@ -28,26 +28,32 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'kickstart/plugins/gitsigns',
-
-  require 'kickstart/plugins/which-key',
-
-  require 'kickstart/plugins/telescope',
-
-  require 'kickstart/plugins/lspconfig',
-
-  require 'kickstart/plugins/conform',
-
-  require 'kickstart/plugins/cmp',
-
-  require 'kickstart/plugins/tokyonight',
-
-  require 'kickstart/plugins/todo-comments',
-
-  require 'kickstart/plugins/mini',
-
-  require 'kickstart/plugins/treesitter',
-
+  require 'dk/plugins/gitsigns',
+  require 'dk/plugins/which-key',
+  require 'dk/plugins/telescope',
+  require 'dk/plugins/lspconfig',
+  require 'dk/plugins/conform',
+  require 'dk/plugins/cmp',
+  require 'dk/plugins/todo-comments',
+  require 'dk/plugins/mini',
+  require 'dk/plugins/treesitter',
+  require 'dk/plugins/kanagawa',
+  require 'dk/plugins/inc_rename',
+  require 'dk/plugins/trouble',
+  require 'dk/plugins/indent_line',
+  require 'dk/plugins/lint',
+  require 'dk/plugins/autopairs',
+  require 'dk/plugins/neo-tree',
+  require 'dk/plugins/undotree',
+  require 'dk/plugins/outline',
+  require 'dk/plugins/lualine',
+  require 'dk/plugins/bufferline',
+  require 'dk/plugins/lazygit',
+  require 'dk/plugins/dashboard',
+  require 'dk/plugins/persisted',
+  require 'dk/plugins/project',
+  require 'dk/plugins/overseer',
+  -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -58,11 +64,6 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
