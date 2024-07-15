@@ -62,4 +62,6 @@ vim.opt.scrolloff = 10
 -- for bufferline
 vim.opt.termguicolors = true
 
+vim.opt.sessionoptions = 'buffers,curdir,folds,globals,tabpages,winpos,winsize'
+
 -- vim: ts=2 sts=2 sw=2 et

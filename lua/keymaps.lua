@@ -8,14 +8,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.get_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.get_next, { desc = 'Go to next [D]iagnostic message' })
-vim.keymap.set('n', '[b', '<CMD>bprevious<CR>', { desc = 'Cyle to Prev File in the [B]uffer' })
-vim.keymap.set('n', ']b', '<CMD>bnext<CR>', { desc = 'Cyle to Next File in the [B]uffer' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Ex command' })
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'", { desc = 'Move lines up in Visual Mode' })
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'", { desc = 'Move lines down in Visual Mode' })
-
 --
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -39,6 +33,18 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Custom keymaps
+vim.keymap.set('n', '[b', '<CMD>bprevious<CR>', { desc = 'Cyle to Prev File in the [B]uffer' })
+vim.keymap.set('n', ']b', '<CMD>bnext<CR>', { desc = 'Cyle to Next File in the [B]uffer' })
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Ex command' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'", { desc = 'Move lines up in Visual Mode' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'", { desc = 'Move lines down in Visual Mode' })
+vim.keymap.set('n', '<leader>bb', '<CMD>e #<CR>', { desc = 'Go to other buffer' })
+vim.keymap.set('i', 'jk', '<ESC>', { desc = 'Leave insert mode' })
+vim.keymap.set('i', 'kj', '<ESC>', { desc = 'Leave insert mode' })
+vim.keymap.set('i', 'jj', '<ESC>', { desc = 'Leave insert mode' })
+vim.keymap.set('n', '<leader>fb', '<CMD>Telescope buffers sort_mru=true sort_lastused=true<CR>', { desc = 'Telescope List buffers' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
